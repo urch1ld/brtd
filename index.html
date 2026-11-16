@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Adventure</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- МУЗИКА -->
+    <audio id="backgroundMusic" loop>
+        <source src="assets/vampire_reference.mp3" type="audio/mpeg">
+    </audio>
+
+    <main id="game">
+
+        <!-- ЕКРАН 1: ПОЧАТОК -->
+        <section class="screen active" id="intro">
+            <div class="content">
+                <p class="subtitle">Невелика пригода yk</p>
+                <h1>ПУКІІІ!!! Привіт :3</h1>
+                <p>Увімкни за бажанням музику</p>
+
+                <button id="musicButton">♫ Увімкнути музику</button>
+
+                <button data-next="screen2">Йдемо далі</button>
+
+                <button class="secondary" data-next="screen2">
+                    Нє
+                </button>
+            </div>
+        </section>
+
+        <!-- ЕКРАН 2 -->
+        <section class="screen" id="screen2">
+            <div class="content">
+                <h1>Ти все одно тут не зважаючи на кнопку лол</h1>
+                <p>Слухай..мені треба тобі дещо сказати</p>
+
+                <button data-next="screen3">Продовжити</button>
+            </div>
+        </section>
+
+        <!-- ЕКРАН 3: ПЕРЕМІЩЕННЯ ПЕРСОНАЖА -->
+        <section class="screen" id="screen3">
+            <div class="content">
+
+                <h1>Але перед цим знайди щось...</h1>
+                <p>Так. На роботі працюй. Тут також працюй..</p>
+
+                <div class="game-area" id="gameArea">
+
+                    <div class="character" id="character">
+                        <img src="assets/danya.png" alt="Персонаж">
+                    </div>
+
+                    <div class="exit" id="exit">
+                        <img src="assets/candle.png" alt="Свічка">
+                    </div>
+
+                </div>
+
+                <!-- ВІКОНЦЕ ДЛЯ ПОВІДОМЛЕНЬ -->
+                <div id="interaction-message" class="interaction-message">
+                    <span id="interaction-text"></span>
+                </div>
+
+                <!-- КНОПКИ РУХУ -->
+                <div class="controls">
+
+                    <button data-move="up">↑</button>
+
+                    <div>
+                        <button data-move="left">←</button>
+                        <button data-move="down">↓</button>
+                        <button data-move="right">→</button>
+                    </div>
+
+                </div>
+
+                <p id="movementMessage">
+                    Використовуй стрілочки або кнопки на клавіатурі
+                </p>
+
+                <button id="movementNext" data-next="musicRoom" hidden>
+                    Знайшов вихід!
+                </button>
+
+            </div>
+        </section>
+
+        <!-- МУЗИЧНА КІМНАТА -->
+        <section class="screen" id="musicRoom">
+            <div class="content">
+                <h1>Ти вибрав музику?</h1>
+
+                <p>
+                    Якщо та, то як тобі? Я напружив всі свої 5 мозкових клітин,
+                    щоб згадати...
+                </p>
+
+                <button data-next="newScreen">
+                    Продовжити
+                </button>
+            </div>
+        </section>
+
+        <!-- НОВИЙ ЕКРАН -->
+        <section class="screen" id="newScreen">
+            <div class="content">
+                <h1>Я б поставив тобі питання..</h1>
+
+                <p>
+                    навіщо тобі свічка з тієї кімнати...
+                    що то взагалі за кімната..? це немає значення тбф (ууу спукі)..
+                    тепер натискай далі
+                </p>
+
+                <button data-next="finale">
+                    Продовжити
+                </button>
+            </div>
+        </section>
+
+        <!-- ФІНАЛ -->
+        <section class="screen" id="finale">
+            <div class="content">
+                <h1>З Днем народження!!!!</h1>
+
+                <p>
+                    Я чесно не дуже добре знаю, що написати, я щиро сподіваюся,
+                    що у тебе все буде як найкраще, бо ти дуже хороший хлопець
+                    і я можу написати ще більше слів ніж тут, але читати їх
+                    треба буде довго тож...я напишу їх у будь-якому випадку. я щиро дякую тобі за весь час проведений разом і за те, що ти є тим ким ти є. 
+                    (Тафтологія сюда). Прошу не слухай поганих людей які люблять казати хуйню, нахуй їх повністю.
+                     і вибач за кайнда жахливу гру і сайт, але це буквально вперше, тож сподіваюся тобі хоч якось зайшло окєй. 
+                    Безмежно люблю і ще раз вітаю, мій платонік газбенд.
+                </p>
+
+                <img src="assets/final_pic.jpg" class="final-photo">
+
+                <button id="restartButton">Почати спочатку</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
